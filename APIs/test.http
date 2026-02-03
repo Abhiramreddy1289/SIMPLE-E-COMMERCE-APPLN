@@ -1,0 +1,39 @@
+###
+POST http://localhost:4000/product-api/products 
+Content-Type: application/json
+
+{
+    "productName":"laptop",
+    "price":70000,
+    "brand":"lenevo"
+}
+
+
+###
+POST http://localhost:4000/user-api/users 
+Content-Type: application/json
+
+{
+    "name":"abhi",
+    "email":"abhi@email.com",
+    "password":"abhi",
+    "cart":[]
+}
+
+
+### req to add product to cart
+PUT http://localhost:4000/user-api/user-cart/user-id/6980737fdc845a9a635aea92/product-id/698068bc2be0af3133d35ba2
+
+
+###
+GET http://localhost:4000/user-api/users/6980737fdc845a9a635aea92
+
+
+
+
+
+
+
+
+//findOne({email:req.body.email})
+//findById(objId)
