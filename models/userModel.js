@@ -5,6 +5,10 @@ const cartSchema=new Schema({
     product:{
         type:Schema.Types.ObjectId,
         ref:'product',    //name of product model
+    },
+    count:{
+        type:Number,
+        default:1
     }
 });
 
@@ -18,7 +22,7 @@ const userSchema=new Schema({
     email:{
         type:String,
         required:[true,"Email is required"],
-        unique:true //add to index
+        unique:[true,"duplicate user"] //add to index
     },
     password:{
         type:String,

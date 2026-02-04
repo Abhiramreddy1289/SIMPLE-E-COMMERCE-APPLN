@@ -50,6 +50,16 @@ userRoute.put('/user-cart/user-id/:uid/product-id/:pid',async(req,res)=>{
     );
     //res
     return res.status(200).json({message:"Product added to cart",payload:modifiedUser})
+    
+    userRoute.get("/compare/:pid",async(req,res)=>{
+        let productId=req.params.pid;
+        let prod=await ProductModel.findById(productId)
+        if(productId===prod._id){
+            console.log("Equal")
+        }else{
+            console.log("Not equal")
+        }
+    })
 
 })
 
